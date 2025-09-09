@@ -1,0 +1,8 @@
+<h2>Are you sure you want to delete <%= @book.title %>?</h2>
+
+<%= button_to "Yes, delete it", book_path(@book), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "Cancel", books_path %>
+
+<div>
+  <%= link_to "Back To Collection", books_path %>
+</div>

@@ -10,7 +10,7 @@
         <p>
           <%= link_to "Show Book Details", book %>
           <%= link_to "Update Book", edit_book_path(book) %>
-          <%= link_to "Remove Book", book, method: :delete, data: { confirm: "Are you sure?" } %>
+          <%= link_to "Delete Book", confirm_delete_book_path(book) %>
         </p>
       </li>
     <% end %>
