@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Book, type: :model do
   it "is valid with valid attributes" do
-    book = Book.new(title: "The Hobbit")
+    book = Book.new(title: "The Hobbit", author: "J.R.R. Tolkien", price: 10.99, published_date: Date.today)
     expect(book).to be_valid
   end
 
