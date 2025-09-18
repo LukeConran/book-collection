@@ -1,0 +1,16 @@
+{
+  "name": "book-collection",
+  "description": "Book collection Rails app",
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0"
+    }
+  ],
+  "environments": {
+    "review": {
+      "addons": [
+        "heroku-postgresql:essential-0"
+      ]
+    }
+  }
+}

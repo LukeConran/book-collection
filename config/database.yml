@@ -19,9 +19,8 @@ test:
   password: <%= ENV['DATABASE_PASSWORD'] || '' %>
 
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
   url: <%= ENV['DATABASE_URL'] %>
-  # Explicitly remove host, username, password to avoid conflicts
-  host: <%= nil %>
-  username: <%= nil %>
-  password: <%= nil %>
